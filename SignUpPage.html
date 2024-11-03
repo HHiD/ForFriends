@@ -1,27 +1,356 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <title>SignUp</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+<html lang="en" data-bs-theme="dark">
+    <head><script src="../js/color-modes.js"></script>
 
-        <!-- Bootstrap CSS v5.2.1 -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.122.0">
+        <title>SignUp Page</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+    
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin="anonymous"
+            />
+    
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+    
+          .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+          }
+    
+          .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+          }
+    
+          .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+          }
+    
+          .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+          }
+    
+          .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+          }
+    
+          .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+          }
+    
+          .bd-mode-toggle {
+            z-index: 1500;
+          }
+    
+          .left-section {
+            background-color: #1C1C1C;
+            border-radius: 20px;
+            position: relative;
+            height: 400px;
+            margin-right: -80px;
+            z-index: 1;
+          }
+    
+          .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+          }
+          
+          .text-them-green {
+            color: #CAFF33; /* Your custom green color */
+          }
+    
+          .divider-vertical {
+            width: 2px;
+            background-color: #CAFF33; /* Your custom green color */
+            height: 80%; /* Adjust height as needed */
+          }
+    
+          .featurette {
+            border-radius: 10px; /* Add border radius to images or cards */
+          }
+    
+          .img-fluid {
+            border-radius: 10px; /* Rounded corners for images */
+          }
+    
+          .text-muted {
+            color: #aaa; /* Customize muted text color */
+          }
+    
+          /* Footer Start */
+          .footer {
+            background-color: #121212; /* Dark background */
+            color: #d1d1d1; /* Light text color */
+            padding: 2rem 0; /* Padding for top and bottom */
+          }
+    
+          .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+    
+          .footer-logo-img {
+            max-height: 50px; /* Adjust logo size */
+            margin-bottom: 0.5rem;
+          }
+    
+          .footer-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #CAFF33; /* Custom green color for brand name */
+            margin: 0;
+          }
+    
+          .footer-nav {
+            margin-bottom: 1rem;
+          }
+    
+          .footer-link {
+            color: #d1d1d1;
+            margin: 0 1rem;
+            text-decoration: none;
+          }
+    
+          .footer-link:hover {
+            color: #CAFF33; /* Hover effect with custom green color */
+          }
+    
+          .footer-divider {
+            border-top: 1px solid #2a2a2a; /* Divider color */
+          }
+    
+          .footer-contact {
+            font-size: 0.9rem;
+          }
+    
+          .footer-contact-item {
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+          }
+    
+          .footer-contact-item i {
+            color: #CAFF33; /* Icon color */
+            margin-right: 0.5rem;
+          }
+    
+          .footer-social {
+            display: flex;
+            justify-content: center;
+          }
+    
+          .social-link {
+            color: #CAFF33; /* Custom green color */
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+          }
+    
+          .social-link:hover {
+            color: #ffffff; /* Hover effect */
+          }
+    
+          .footer-bottom {
+            font-size: 0.8rem;
+          }
+    
+          .footer-legal {
+            display: flex;
+          }
+    
+          .footer-legal-link {
+            color: #d1d1d1;
+            text-decoration: none;
+          }
+    
+          .footer-legal-link:hover {
+            color: #CAFF33; /* Hover effect with custom green color */
+          }
+    
+          /* Footer End */
+    
+    
+          body {
+                font-family: 'Lexend', sans-serif;
+          }
+    
+          .them-green {
+            color: #CAFF33;
+          }
+    
+          main {
+            margin-top: 20px;
+          }
+          .intro-text {
+        font-weight: 300;  /* 更细的字体 */
+        color: #d3d3d3;    /* 浅灰色的字体颜色 */
+        line-height: 1.6;  /* 适当增加行高，使文字更易阅读 */
+                      }
+    
+            .navbar {
+                background-color: #1c1c1c;  /* 深色背景 */
+                border-radius: 30px;        /* 确保内部也有圆角 */
+            }
+            .navbar-brand {
+                font-size: 32px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            .navbar-nav .nav-link {
+                color: #b5b5b5;  /* 设置导航链接的颜色 */
+                padding: 10px 20px;
+                border-radius: 20px;  /* 设置圆角 */
+                transition: background-color 0.3s, color 0.3s;  /* 平滑过渡效果 */
+            }
+            .navbar-nav .nav-link:hover {
+                background-color: #333;  /* 悬停时的背景颜色 */
+                color: #ffffff;  /* 悬停时的文字颜色 */
+            }
+            .btn-signup {
+                color: #ffffff;
+                border: none;
+                background-color: transparent;
+            }
+            .btn-login {
+                background-color: #d6ff3e;  /* 高亮按钮颜色 */
+                color: #000;
+                border-radius: 20px;
+                border: none;
+                padding: 5px 15px;
+            }
+            .btn-login:hover {
+                background-color: #c4e637;  /* 悬停时的颜色变化 */
+            }
+            /* 圆角外框的样式 */
+            .navbar-wrapper {
+                border: 2px solid #3a3a3a; /* 边框颜色 */
+                border-radius: 30px;       /* 圆角半径 */
+                padding: 0;                /* 移除内边距 */
+                max-width: 1440px;         /* 限制最大宽度 */
+                margin: 20px auto;         /* 使整个容器居中，并在顶部和底部添加间距 */
+                overflow: hidden;          /* 确保圆角背景与内容相匹配 */
+            }
+            .nav-container {
+                position: absolute;        /* 设置导航容器为绝对定位 */
+                left: 50%;
+                transform: translateX(-50%); /* 通过变换来水平居中 */
+                display: flex;
+                align-items: center;
+                justify-content: center;  /* 确保导航链接部分在中间 */
+            }
+            .btn-container {
+                display: flex;
+                align-items: center;
+                gap: 10px;  /* 控制 Sign Up 和 Login 按钮的间距 */
+            }
+    
+        </style>
+    
+        
+        <!-- Custom styles for this template -->
+        <link href="../css/carousel.css" rel="stylesheet">
+      </head>
 
     <body>
         <header>
-            <!-- place navbar here -->
-        </header>
+            <div class="navbar-wrapper">
+              <nav class="navbar navbar-expand-lg navbar-dark">
+                  <div class="container d-flex justify-content-between align-items-center position-relative">
+                      <!-- Logo 和标题 -->
+                      <div class="d-flex align-items-center">
+                          <a class="navbar-brand" href="#">
+                              <img src="images/logo.png" alt="Logo" width="60px" height="60px" class="d-inline-block">
+                              <span class="ms-2">Panther Tire Service</span>
+                          </a>
+                      </div>
+      
+                      <!-- 导航链接 -->
+                      <div class="collapse navbar-collapse nav-container" id="navbarNav">
+                          <ul class="navbar-nav">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="home.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Services</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Appointment</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">MyPanther</a>
+                              </li>
+                          </ul>
+                      </div>
+      
+                      <!-- Sign Up 和 Login 按钮 -->
+                      <div class="btn-container">
+                          <button class="btn btn-signup" onclick="window.location.href='SignUpPage.html'">Sign Up</button>
+                          <button class="btn btn-login" onclick="window.location.href='LoginPage.html'">Login</button>
+                      </div>
+                  </div>
+      
+              </nav>
+          </div>
+          </header>
         <main></main>
         <footer>
             <!-- place footer here -->

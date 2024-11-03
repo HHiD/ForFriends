@@ -240,6 +240,69 @@
       main {
         margin-top: 20px;
       }
+      .intro-text {
+    font-weight: 300;  /* 更细的字体 */
+    color: #d3d3d3;    /* 浅灰色的字体颜色 */
+    line-height: 1.6;  /* 适当增加行高，使文字更易阅读 */
+                  }
+
+        .navbar {
+            background-color: #1c1c1c;  /* 深色背景 */
+            border-radius: 30px;        /* 确保内部也有圆角 */
+        }
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .navbar-nav .nav-link {
+            color: #b5b5b5;  /* 设置导航链接的颜色 */
+            padding: 10px 20px;
+            border-radius: 20px;  /* 设置圆角 */
+            transition: background-color 0.3s, color 0.3s;  /* 平滑过渡效果 */
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #333;  /* 悬停时的背景颜色 */
+            color: #ffffff;  /* 悬停时的文字颜色 */
+        }
+        .btn-signup {
+            color: #ffffff;
+            border: none;
+            background-color: transparent;
+        }
+        .btn-login {
+            background-color: #d6ff3e;  /* 高亮按钮颜色 */
+            color: #000;
+            border-radius: 20px;
+            border: none;
+            padding: 5px 15px;
+        }
+        .btn-login:hover {
+            background-color: #c4e637;  /* 悬停时的颜色变化 */
+        }
+        /* 圆角外框的样式 */
+        .navbar-wrapper {
+            border: 2px solid #3a3a3a; /* 边框颜色 */
+            border-radius: 30px;       /* 圆角半径 */
+            padding: 0;                /* 移除内边距 */
+            max-width: 1440px;         /* 限制最大宽度 */
+            margin: 20px auto;         /* 使整个容器居中，并在顶部和底部添加间距 */
+            overflow: hidden;          /* 确保圆角背景与内容相匹配 */
+        }
+        .nav-container {
+            position: absolute;        /* 设置导航容器为绝对定位 */
+            left: 50%;
+            transform: translateX(-50%); /* 通过变换来水平居中 */
+            display: flex;
+            align-items: center;
+            justify-content: center;  /* 确保导航链接部分在中间 */
+        }
+        .btn-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;  /* 控制 Sign Up 和 Login 按钮的间距 */
+        }
+
     </style>
 
     
@@ -247,50 +310,46 @@
     <link href="../css/carousel.css" rel="stylesheet">
   </head>
   <body>
-        
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
-                <div class="navi-title" style="font-size: 32px; font-weight: bold;">Panther Tire Service</div>
-            </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- Navigation items on the left -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Appointment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">MyPanther</a>
-                        </li>
-                    </ul>
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container d-flex justify-content-between align-items-center position-relative">
+              <!-- Logo 和标题 -->
+              <div class="d-flex align-items-center">
+                  <a class="navbar-brand" href="#">
+                      <img src="images/logo.png" alt="Logo" width="60px" height="60px" class="d-inline-block">
+                      <span class="ms-2">Panther Tire Service</span>
+                  </a>
+              </div>
 
-                    <!-- Sign Up and Login on the right -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="SignUpPage.html">Sign Up</a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-login" onclick="window.location.href='LoginPage.html'">Login</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        </div>
+              <!-- 导航链接 -->
+              <div class="collapse navbar-collapse nav-container" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Appointment</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">MyPanther</a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Sign Up 和 Login 按钮 -->
+              <div class="btn-container">
+                  <button class="btn btn-signup" onclick="window.location.href='SignUpPage.html'">Sign Up</button>
+                  <button class="btn btn-login" onclick="window.location.href='LoginPage.html'">Login</button>
+              </div>
+          </div>
+
       </nav>
+  </div>
+
+
     </header>
 
     <main>
@@ -308,11 +367,11 @@
         <div class="row featurette">
           <div class="col-md-6">
             <div class="left-section p-4">
-                <p>Welcome to Panther Tire Service</p> 
-                <h2 class="featurette-heading fw-normal lh-1">What Tire Care</h2>
-                <h2 class="featurette-heading fw-normal lh-1">Meets</h2>
-                <h2 class="featurette-heading fw-normal lh-1"><div class="them-green">Excellence!</div></h2>
-                <p>At Panther Tire Service, we believe tire service is more than just maintenance—it's about ensuring safety, performance, and peace of mind for every driver. As a trusted tire service provider, we are dedicated to delivering exceptional services that exceed expectations. With a focus on innovation, personalized solutions, and unwavering integrity, we strive to provide the best tire care experience for our valued customers. Join us on this journey and discover a new level of tire service excellence.</p>
+              <p>Welcome to Panther Tire Service</p> 
+              <h2 class="featurette-heading fw-normal lh-1">What Tire Care</h2>
+              <h2 class="featurette-heading fw-normal lh-1">Meets</h2>
+              <h2 class="featurette-heading fw-normal lh-1"><div class="them-green">Excellence!</div></h2>
+              <p class="intro-text">At Panther Tire Service, we believe tire service is more than just maintenance—it's about ensuring safety, performance, and peace of mind for every driver. As a trusted tire service provider, we are dedicated to delivering exceptional services that exceed expectations. With a focus on innovation, personalized solutions, and unwavering integrity, we strive to provide the best tire care experience for our valued customers. Join us on this journey and discover a new level of tire service excellence.</p>
             </div>
           </div>
           <div class="col-md-6">

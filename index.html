@@ -11,7 +11,11 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
@@ -107,6 +111,13 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+/* With BootSrap fremworks, How to use CSS change Text font and size or color */
+
+      /* Use Lexend as the default font */
+      body {
+            font-family: 'Lexend', sans-serif;
+        }
+
       .them-green {
         color: #CAFF33;
       }
@@ -125,12 +136,11 @@
     <header data-bs-theme="dark">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
-
           <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container">
               <a class="navbar-brand" href="#">
                 <img src="images/logo.png" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
-                Panther Tire Service
+                <div class="navi-title" style="font-size: 32px; font-weight: bold;">Panther Tire Service</div>
             </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

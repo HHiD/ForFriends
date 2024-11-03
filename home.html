@@ -237,72 +237,133 @@
             color: #CAFF33;
           }
     
-          main {
+        main {
             margin-top: 20px;
-          }
+        }
           .intro-text {
         font-weight: 300;  /* 更细的字体 */
         color: #d3d3d3;    /* 浅灰色的字体颜色 */
         line-height: 1.6;  /* 适当增加行高，使文字更易阅读 */
-                      }
-    
-            .navbar {
-                background-color: #1c1c1c;  /* 深色背景 */
-                border-radius: 30px;        /* 确保内部也有圆角 */
-            }
-            .navbar-brand {
-                font-size: 32px;
-                font-weight: bold;
-                color: #ffffff;
-            }
-            .navbar-nav .nav-link {
-                color: #b5b5b5;  /* 设置导航链接的颜色 */
-                padding: 10px 20px;
-                border-radius: 20px;  /* 设置圆角 */
-                transition: background-color 0.3s, color 0.3s;  /* 平滑过渡效果 */
-            }
-            .navbar-nav .nav-link:hover {
-                background-color: #333;  /* 悬停时的背景颜色 */
-                color: #ffffff;  /* 悬停时的文字颜色 */
-            }
-            .btn-signup {
-                color: #ffffff;
-                border: none;
-                background-color: transparent;
-            }
-            .btn-login {
-                background-color: #d6ff3e;  /* 高亮按钮颜色 */
-                color: #000;
-                border-radius: 20px;
-                border: none;
-                padding: 5px 15px;
-            }
-            .btn-login:hover {
-                background-color: #c4e637;  /* 悬停时的颜色变化 */
-            }
-            /* 圆角外框的样式 */
-            .navbar-wrapper {
-                border: 2px solid #3a3a3a; /* 边框颜色 */
-                border-radius: 30px;       /* 圆角半径 */
-                padding: 0;                /* 移除内边距 */
-                max-width: 1440px;         /* 限制最大宽度 */
-                margin: 20px auto;         /* 使整个容器居中，并在顶部和底部添加间距 */
-                overflow: hidden;          /* 确保圆角背景与内容相匹配 */
-            }
-            .nav-container {
-                position: absolute;        /* 设置导航容器为绝对定位 */
-                left: 50%;
-                transform: translateX(-50%); /* 通过变换来水平居中 */
-                display: flex;
-                align-items: center;
-                justify-content: center;  /* 确保导航链接部分在中间 */
-            }
-            .btn-container {
-                display: flex;
-                align-items: center;
-                gap: 10px;  /* 控制 Sign Up 和 Login 按钮的间距 */
-            }
-    
+        }
+
+        .navbar {
+            background-color: #1c1c1c;  /* 深色背景 */
+            border-radius: 30px;        /* 确保内部也有圆角 */
+        }
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .navbar-nav .nav-link {
+            color: #b5b5b5;  /* 设置导航链接的颜色 */
+            padding: 10px 20px;
+            border-radius: 20px;  /* 设置圆角 */
+            transition: background-color 0.3s, color 0.3s;  /* 平滑过渡效果 */
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #333;  /* 悬停时的背景颜色 */
+            color: #ffffff;  /* 悬停时的文字颜色 */
+        }
+        .btn-signup {
+            color: #ffffff;
+            border: none;
+            background-color: transparent;
+        }
+        .btn-login {
+            background-color: #CAFF33;  /* 高亮按钮颜色 */
+            color: #000;
+            border-radius: 20px;
+            border: none;
+            padding: 5px 15px;
+        }
+        .btn-login:hover {
+            background-color: #CAFF33;  /* 悬停时的颜色变化 */
+        }
+        /* 圆角外框的样式 */
+        .navbar-wrapper {
+            border: 2px solid #3a3a3a; /* 边框颜色 */
+            border-radius: 30px;       /* 圆角半径 */
+            padding: 0;                /* 移除内边距 */
+            max-width: 1440px;         /* 限制最大宽度 */
+            margin: 20px auto;         /* 使整个容器居中，并在顶部和底部添加间距 */
+            overflow: hidden;          /* 确保圆角背景与内容相匹配 */
+        }
+        .nav-container {
+            position: absolute;        /* 设置导航容器为绝对定位 */
+            left: 50%;
+            transform: translateX(-50%); /* 通过变换来水平居中 */
+            display: flex;
+            align-items: center;
+            justify-content: center;  /* 确保导航链接部分在中间 */
+        }
+        .btn-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;  /* 控制 Sign Up 和 Login 按钮的间距 */
+        }
+
+        .btn .btn-yello .rounded-pill .px-3 {
+            color: #5a23c8;
+        }
+
+        .btn-custom {
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-custom.active {
+            background-color: #CAFF33;  /* 高亮背景颜色 */
+            color: #000;               /* 高亮时的文字颜色 */
+        }
+        .btn-custom:not(.active) {
+            background-color: transparent; /* 非选中按钮的背景 */
+            color: #ffffff;                /* 非选中按钮的文字颜色 */
+        }
+
+        .card {
+        background-color: #333;
+        border: none;
+        border-radius: 15px;
+        color: #ffffff;
+        transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .btn-custom {
+            background-color: #CAFF33;
+            color: #000;
+            border-radius: 20px;
+            border: none;
+            padding: 10px 20px;
+        }
+        .btn-outline-custom {
+            color: #CAFF33;
+            border: 2px solid #CAFF33;
+            border-radius: 20px;
+        }
+        .faq-item {
+            background-color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .testimonial-card {
+            background-color: #333;
+            border: none;
+            border-radius: 15px;
+            padding: 20px;
+            color: #ffffff;
+        }
+        .cta-section {
+            background-color: #2b2b2b;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
         </style>
     
         
@@ -351,9 +412,189 @@
               </nav>
           </div>
           </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
+        <main>
+
+            <div class="container">
+
+                <div class="row featurette" style="margin-top: 100px;">
+                    <div class="col-md-6 d-flex flex-column align-items-center text-center">
+                        <div style="align-items:start; text-align: left;">
+                            <div>Easy Appointments, No Hidden Fees.</div>
+                            <h3 >Welcome to Panther Tire Service</h3>
+                            <h3 >Your <span class="text-body-secondary" style="color: #CAFF33 !important;">Premier One-Stop</span> Tire</h3>
+                            <h3 >Solution</h3>
+                            <p>"At Panther Tire Service, our mission is to offer top-quality tire solutions that keep you safe and confident on the road. We are dedicated to providing personalized, reliable, and innovative services tailored to meet the unique needs of every driver."</p>
+                            <button class="btn btn-success rounded-pill px-3" type="button" style="color: black; background-color: #CAFF33;">Open Account</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column align-items-center text-center">
+                        <img src="images/tire_top.png" alt="Person using a laptop" class="img-fluid rounded" width="515px" height="400px">
+                    </div>
+                </div>
+
+
+                <h2 style="margin-top: 200px;" class="featurette-heading fw-normal lh-1">Our <span class="text-body-secondary" style="color: #CAFF33 !important;">Service</span></h2>
+                <div class="row featurette" style="margin-top: 15px;">
+                    <div class="col-md-6 d-flex flex-column align-items-left text-left" style="padding-right: 15px;"> 
+                        <p style="font-size: 0.8rem;">Discover our full range of professional tire services at Panther Tire Service, tailored to meet your vehicle's unique requirements and ensure you stay safe and secure on the road.</p>
+                    </div>
+                    
+                    <div class="col-md-6 d-flex flex-column align-items-right text-right" style="padding-left: 260px;">
+                        <div class="container d-flex justify-content-center align-items-center" style="height: 50px;">
+                            <div class="btn-group" role="group" aria-label="Individual and Business">
+                                <button type="button" class="btn btn-custom active" id="btn-individual">For Individuals</button>
+                                <button type="button" class="btn btn-custom" id="btn-business">For Businesses</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <div class="row featurette" style="margin-top: 100px;">
+                    <div class="col-md-4 d-flex flex-column align-items-center text-center">
+                        <img src="images/geer.png" alt="Person using a laptop" class="img-fluid rounded" width="60px" height="60px">
+                        <h3 style="margin-top: 20px;">Tire Installation</h3>
+                        <p>Get reliable and professional tire installation services that ensure your vehicle's safety and performance. Whether it's new tires or a replacement, our expert team makes the process quick and seamless.</p>
+                    </div>
+                    
+                    <div class="col-md-4 d-flex flex-column align-items-center text-center">
+                        <img src="images/screaw.png" alt="Person using a laptop" class="img-fluid rounded" width="60px" height="60px">
+                        <h3 style="margin-top: 20px;">Tire Repair</h3>
+                        <p>Restore your tires to optimal condition with our comprehensive repair services. From punctures to wear and tear, we offer solutions that extend the life of your tires and save you money.</p>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center text-center">
+                        <img src="images/focus.png" alt="Person using a laptop" class="img-fluid rounded" width="60px" height="60px">
+                        <h3 style="margin-top: 20px;">Tire Rotation and Balancing</h3>
+                        <p>Maintain even tire wear and improve vehicle handling with our tire rotation and balancing services. Our skilled technicians help you get the most out of your tires and ensure a smooth ride.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container mt-5">
+                <!-- Features Section -->
+                <h2 class="mb-4" style="margin-top: 200px;">Our <span style="color: #CAFF33;">Features</span></h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <h5>Online Banking</h5>
+                            <p>Manage your accounts, view statements, and transfer funds with ease.</p >
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <h5>24/7 Account Access</h5>
+                            <p>Access your accounts anytime, anywhere, and perform critical operations seamlessly.</p >
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <h5>Mobile Banking App</h5>
+                            <p>Manage your finances on the go with our mobile app, compatible with iOS and Android.</p >
+                        </div>
+                    </div>
+                </div>
+                <!-- More Features -->
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <h5>Customer Support</h5>
+                            <p>We are here to help you 24/7 with all your banking needs and questions.</p >
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <h5>Secure Transfers</h5>
+                            <p>We use secure systems for all transfers, providing you with peace of mind.</p >
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <h5>Bill Pay and Transfers</h5>
+                            <p>Pay bills and transfer money to friends or family easily with our secure services.</p >
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- FAQ Section -->
+                <div style="margin-top: 200px;"><h2 class="mt-5 mb-4">Frequently Asked <span style="color: #CAFF33;">Questions</span></h2></div>
+                <div class="faq-item">
+                    <h5>How do I book an appointment with Panther Tire Service?</h5>
+                    <p>Booking an appointment is easy, just head to our website, select a service, and choose an available time slot.</p >
+                </div>
+                <div class="faq-item">
+                    <h5>What services does Panther Tire Service offer?</h5>
+                    <p>We offer a wide range of tire services, including replacements, balancing, alignments, and seasonal tire changeovers.</p >
+                </div>
+                <div class="faq-item">
+                    <h5>Are your services safe and reliable?</h5>
+                    <p>Absolutely, we ensure that all our services meet industry standards and our staff are highly trained professionals.</p >
+                </div>
+                <a href=" " class="btn btn-outline-custom mt-3">Load More FAQs</a >
+        
+                <!-- Testimonials Section -->
+                <div style="margin-top: 200px;"><h2 class="mt-5 mb-4">Our <span style="color: #CAFF33;">Testimonials</span></h2></div>
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="btn btn-custom me-2">For Individuals</button>
+                    <button class="btn btn-outline-custom">For Businesses</button>
+                </div>
+                <div class="testimonial-card mb-4">
+                    <p>"Coming to Panther Tire Service was the best decision for my vehicle! They were professional and quick, and my car drives so smoothly now." - Jane D.</p >
+                </div>
+                <div class="testimonial-card mb-4">
+                    <p>"Panther Tire Service has provided our business with top-notch service for our entire fleet. Their expertise is unmatched." - John P.</p >
+                </div>
+        
+                <!-- Call to Action Section -->
+                <div class="cta-section mt-5">
+                    <h3>Get rolling with Panther Tire Service today!</h3>
+                    <p>Experience the difference in quality, service, and value for all your tire needs.</p >
+                    <button class="btn btn-custom">Book Appointment</button>
+                </div>
+            </div>
+        </main>
+           <!-- FOOTER -->
+        <footer class="footer bg-dark text-light py-4">
+            <div class="container text-center">
+            <!-- Logo and Navigation Links -->
+            <div class="footer-logo mb-3">
+                <img src="images/logo.png" alt="Panther Tire Service Logo" class="footer-logo-img">
+                <h3 class="footer-brand">Panther Tire Service</h3>
+            </div>
+            
+            <nav class="footer-nav">
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">Careers</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Security</a>
+            </nav>
+            
+            <hr class="footer-divider my-3">
+        
+            <!-- Contact Information -->
+            <div class="footer-contact d-flex justify-content-center align-items-center mb-3">
+                <span class="footer-contact-item"><i class="fas fa-envelope"></i> hello@panthertire.com</span>
+                <span class="footer-contact-item mx-3"><i class="fas fa-phone"></i> +91 91813 23 2309</span>
+                <span class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Somewhere in the World</span>
+            </div>
+        
+            <!-- Social Media Links -->
+            <div class="footer-social mb-3">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        
+            <!-- Copyright and Privacy Links -->
+            <div class="footer-bottom d-flex justify-content-between">
+                <p class="mb-0">Panther Tire © All Rights Reserved</p>
+                <div class="footer-legal">
+                <a href="#" class="footer-legal-link">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="footer-legal-link">Terms of Service</a>
+                </div>
+            </div>
+            </div>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
@@ -367,5 +608,17 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script>
+            // JavaScript to toggle active state between buttons
+            document.getElementById('btn-individual').addEventListener('click', function () {
+                document.getElementById('btn-individual').classList.add('active');
+                document.getElementById('btn-business').classList.remove('active');
+            });
+    
+            document.getElementById('btn-business').addEventListener('click', function () {
+                document.getElementById('btn-business').classList.add('active');
+                document.getElementById('btn-individual').classList.remove('active');
+            });
+        </script>
     </body>
 </html>
